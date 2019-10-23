@@ -26,6 +26,22 @@ public class TimeEntry {
         this.hours = hours;
     }
 
+    public long getProjectId() {
+        return projectId;
+    }
+
+    public long getUserId() {
+        return userId;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public int getHours() {
+        return hours;
+    }
+
     public TimeEntry() {
 
     }
