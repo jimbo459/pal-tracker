@@ -16,6 +16,7 @@ import java.util.Map;
 import java.util.TimeZone;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 public class JdbcTimeEntryRepositoryTest {
     private TimeEntryRepository subject;
@@ -54,6 +55,7 @@ public class JdbcTimeEntryRepositoryTest {
         TimeEntry entry = subject.create(newTimeEntry);
 
         assertThat(entry.getId()).isNotNull();
+        assertThat(entry.getId()).isGreaterThan(0);
         assertThat(entry.getProjectId()).isEqualTo(123);
         assertThat(entry.getUserId()).isEqualTo(321);
         assertThat(entry.getDate()).isEqualTo(LocalDate.parse("2017-01-09"));
