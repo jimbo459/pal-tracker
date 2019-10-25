@@ -17,7 +17,7 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository{
     }
 
     public TimeEntry find(long id) {
-       return timeEntryList.get(id);
+        return timeEntryList.get(id);
     }
 
     public List<TimeEntry> list() {
